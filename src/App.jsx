@@ -4,7 +4,7 @@ import './App.css';
 import Header from './Header';
 import SearchForm from './SearchForm';
 import PokemonDetails from './PokemonDetails';
-import ErrorMessage from './ErrorMessage';
+//import ErrorMessage from './ErrorMessage';
 
 function App() {
   const [pokemon, setPokemon] = useState(null); 
@@ -33,7 +33,9 @@ function App() {
     };
 
     useEffect(() => {
-      setLoading(true)
+      if(pokemonName !== '') {
+        setLoading(true)
+      }
       const delay = setTimeout(() => {
         if (pokemonName) {
           fetchPokemon(pokemonName); 
