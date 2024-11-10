@@ -1,14 +1,14 @@
 /*----CON useEffect-----*/
 const SearchForm = ({ pokemonName, handleChange }) => (
   <>
-  <form onSubmit={(e) => e.preventDefault()}> {/* Previene el comportamiento por defecto */}
+  <form onSubmit={(e) => e.preventDefault()}>
     <label htmlFor="pokemonName">Buscar Pokémon:</label>
     <input
       type="text"
       id="pokemonName"
       value={pokemonName}
       placeholder="Nombre del pokemón"
-      onChange={handleChange} // Cambia el valor de pokemonName en tiempo real
+      onChange={handleChange} 
     />
   </form>
   </>
